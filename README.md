@@ -1,5 +1,4 @@
-# 📚 **Odoo Bookstore Management Module
-**
+# 📚 **Odoo Bookstore Management Module** 
 A custom Odoo 17 module to manage a digital bookstore — built for learning and production use. This module includes books, genres, authors, and a wizard to assign authors easily.
 
 ## 🚀 Features
