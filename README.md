@@ -16,7 +16,7 @@ A custom Odoo 17 module to manage a digital bookstore — built for learning and
 
 1. Clone this repository or copy the module into your Odoo addons path:
    ```bash
-   git clone https://github.com/yourusername/odoo_bookstore.git
+   git clone https://github.com/Abigiya-M/odoo_bookstore.git
 
 ## 🧪 Testing
 
