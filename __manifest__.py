@@ -1,7 +1,7 @@
 {
     'name': 'My Bookstore',
     'version': '17.0.1.0.0',
-    'depends': ['base', 'mail'],  
+    'depends': ['base','product','purchase','sale','mail'],  
     'summary': 'Manage bookstore inventory and sales',
     'sequence': 10,
     'description': """A simple module to manage bookstore""",
@@ -16,9 +16,9 @@
         'views/book_views.xml',
         'views/genre_views.xml',
         'views/book_kanban_view.xml',
-
+        'views/product_template_inherit.xml',
     ],
-    
+
     'demo': [
     'data/demo_data.xml',
 ],
