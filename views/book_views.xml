@@ -16,7 +16,7 @@
     <menuitem id="menu_book_root" name="Bookstore"/>
     <menuitem id="menu_book_details" name="Books" parent="menu_book_root" action="action_book_details"/>
 
-    <!-- Tree (list) view for books -->
+    <!-- Tree (list) view for book.details -->
     <record id="view_book_tree" model="ir.ui.view">
         <field name="name">book.details.tree</field>
         <field name="model">book.details</field>
@@ -36,11 +36,13 @@
                 <field name="stock_qty"/>
                 <field name="price"/>
                 <field name="is_archived"/>
+                <!-- New field with domain -->
+                <field name="product_id" domain="[('is_book', '=', True)]"/>
             </tree>
         </field>
     </record>
 
-    <!-- Form view for books -->
+    <!-- Form view for book.details -->
     <record id="view_book_form" model="ir.ui.view">
         <field name="name">book.details.form</field>
         <field name="model">book.details</field>
@@ -49,6 +51,7 @@
                 <sheet>
                     <group>
                         <field name="title"/>
+                        <field name="product_id" domain="[('is_book', '=', True)]"/>
                         <field name="author_id"/>
                         <field name="publisher"/>
                         <field name="published_date"/>
@@ -60,6 +63,7 @@
                         <field name="genre_ids" widget="many2many_tags"/>
                         <field name="cover_image" widget="image" options="{'preview_image': 'cover_image'}"/>
                         <field name="is_archived"/>
+                        <!-- New field -->
                     </group>
                 </sheet>
                 <div class="oe_chatter">
@@ -83,7 +87,7 @@
                 <field name="title"/>
                 <field name="author_id"/>
                 <field name="publisher"/>
-                
+
                 <filter string="Archived" name="archived" domain="[('is_archived', '=', True)]"/>
                 <filter string="Active" name="active" domain="[('is_archived', '=', False)]"/>
                 <filter string="Published in 2025" name="published_2025"
